@@ -7,3 +7,9 @@ def index(request):
 
 def home(request):
     return HttpResponse("home!")
+
+def ques_page(request, ques_id):
+    return HttpResponse("<h3>%d</h3>" % ques_id)
+
+def post_html(request, num):
+    return render(request, "reportcard.html", {'num': range(num)})
